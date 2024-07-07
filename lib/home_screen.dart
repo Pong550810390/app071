@@ -1,4 +1,5 @@
 import 'package:app07/about_us.dart';
+import 'package:app07/calculation.dart';
 import 'package:app07/contact_us.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -64,6 +65,16 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
+        onTap: (value) {
+          switch (value) {
+            case 1:
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => CalculationScreen()));
+              break;
+            default:
+              break;
+          }
+        },
         items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
