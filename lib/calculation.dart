@@ -27,8 +27,14 @@ class _CalculationScreenState extends State<CalculationScreen> {
             Form(
                 child: Column(
               children: [
-                TextFormField(),
-                TextFormField(),
+                TextFormField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(labelText: "กรอกวงเงิน"),
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(labelText: "อัตราดอกเบี้ย"),
+                ),
                 SizedBox(
                   height: 20,
                 ),
